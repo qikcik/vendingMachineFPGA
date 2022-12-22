@@ -1,0 +1,38 @@
+Active-HDL 13.0.376.8320 2022-12-22 19:36:20
+
+Elaboration top modules:
+Architecture                  behaviour(VendingMachine_TB)
+
+
+----------------------------------------------------------------------------------------------------
+Entity            | Architecture | Library | Info | Compiler Version          | Compilation Options
+----------------------------------------------------------------------------------------------------
+VendingMachine_TB | behaviour    | Sandbox |      | 13.0.376.8320 (Windows64) | -O3 -2008
+VendingMachine    | behaviour    | Sandbox |      | 13.0.376.8320 (Windows64) | -O3 -2008
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+VHDL Package                     | Library | Info | Compiler Version          | Compilation Options
+----------------------------------------------------------------------------------------------------
+standard                         | std     |      |                           | <unavailable>
+TEXTIO                           | std     |      | 13.0.376.8320 (Windows64) |  -2019
+std_logic_1164                   | ieee    |      | 13.0.376.8320 (Windows64) |  -2008
+NUMERIC_STD                      | ieee    |      | 13.0.376.8320 (Windows64) |  -2008
+VendingMachine_Types             | Sandbox |      | 13.0.376.8320 (Windows64) | -O3 -2008
+Disp4x7Seg_Types                 | Sandbox |      | 13.0.376.8320 (Windows64) | -O3 -2008
+ENV                              | std     |      | 13.0.376.8320 (Windows64) |  -2019
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Library                          | Comment
+----------------------------------------------------------------------------------------------------
+ieee                             | Standard IEEE packages library
+Sandbox                          | None
+std                              | Standard VHDL library
+----------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+VendingMachine_TB VendingMachine_TB behaviour
+
+
+The performance of simulation is reduced. Version Student Edition

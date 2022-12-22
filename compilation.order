@@ -1,0 +1,4 @@
+.\src\VendingMachine\VendingMachine_Types.vhd
+.\src\VendingMachine\VendingMachine.vhd
+.\src\VendingMachine\VendingMachine_TB.vhd
+.\src\Disp7Seg\Disp4x7Seg_Types.vhd

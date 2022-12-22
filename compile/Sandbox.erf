@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:/My_Designs/Sandbox/src/VendingMachine/VendingMachine.vhd" 
+MESSAGE "Compile Entity "VendingMachine"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "VendingMachine"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

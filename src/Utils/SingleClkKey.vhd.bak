@@ -1,0 +1,42 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.Disp4x7Seg_Types.all;
+
+entity SingleClkKey is
+	port (
+		in_clk					: in std_logic;
+		
+		in_key 					: in std_logic;
+		out_key 					: out std_logic;
+	);
+end SingleClkKey;
+
+architecture behaviour of SingleClkKey is
+	signal mem : std_logic := '0';
+begin 
+	process(in_clk)
+	begin
+		if rising_edge(in_clk) then
+			case digitSelect is
+				when "00" => out_7seg <= in_7seg(0);
+				when "01" => out_7seg <= in_7seg(1);
+				when "10" => out_7seg <= in_7seg(2);
+				when "11" => out_7seg <= in_7seg(3);
+			end case;
+			
+			case digitSelect is
+				when "00" => out_7segDigitSelect <= "0001";
+				when "01" => out_7segDigitSelect <= "0010";
+				when "10" => out_7segDigitSelect <= "0100";
+				when "11" => out_7segDigitSelect <= "1000";
+			end case;
+			
+			digitSelect <= digitSelect + 1;
+		end if;
+	end process;
+	
+end behaviour;
+

@@ -1,0 +1,1 @@
+-w -erf C:/My_Designs/Sandbox/compile/Sandbox.erf -d C:/My_Designs/Sandbox/compile -s C:/My_Designs/Sandbox/Sandbox/library.cfg -j C:/My_Designs/Sandbox/projlib.cfg -work Sandbox -O3 -e 100 -work Sandbox -2008 C:/My_Designs/Sandbox/src/VendingMachine/VendingMachine.vhd 

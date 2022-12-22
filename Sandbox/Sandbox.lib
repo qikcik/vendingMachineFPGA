@@ -1,0 +1,56 @@
+timestamp=1671734110304
+
+[~A]
+ModifyID=57
+Version=74
+
+[~MFT]
+0=2|0Sandbox.mgf|189355|170059
+1=2|1Sandbox.mgf|673843|660713
+3=2|3Sandbox.mgf|172156|169691
+
+[disp4x7seg_types]
+BinW64/disp4x7seg_types=3*171571
+E=1*661439
+I=0*56655
+I/disp4x7seg_types=I/Disp4x7Seg_Types 0*189088
+M=3|2|vef|1671715283225|../src/Disp7Seg/Disp4x7Seg_Types.vhd|0*54559*0x1cf7581162412e9df0e81cb12cba4a1e7bf04435|0*56549*0xd986fd7175c8cf28cd774bcadde79966
+M/disp4x7seg_types=M/Disp4x7Seg_Types 4|2|vef|1671721300371|../src/Disp7Seg/Disp4x7Seg_Types.vhd|0*56905*0x806ab099341d0f9cfb72fd31ae9b7679fb60857a|0*57836*0xb966535deb9617f745ced53ae4cc1a7f
+R=../src/Disp7Seg/Disp4x7Seg_Types.vhd|6
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|54583043f539217922bcac9dffa186649d249b16827205ae982dfcca9fda3492382a9f488a57e08e5b4ccda484284b79
+Version/disp4x7seg_types=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|54583043f539217922bcac9dffa186649d249b16827205ae982dfcca9fda349249fd45f8ef666fa2deb014c3ed6acfad
+
+[vendingmachine]
+A/behaviour=21|../src/VendingMachine/VendingMachine.vhd|24|1*673843
+BinW64/behaviour=3*172156
+I=0*58567
+I/behaviour=0*189355
+M=11|2|vef|1671715297350|../src/VendingMachine/VendingMachine.vhd|0*44675*0xf126d1fbc4d1d4780f6ddc9929224cdb0336a432|0*45360*0xd986fd7175c8cf28cd774bcadde79966
+M/behaviour=21|2|vef|1671734110289|../src/VendingMachine/VendingMachine.vhd|0*183391*0x9a92412b4fb3eebb9dac284c06ed3d7fe0f80174|0*188223*0xb966535deb9617f745ced53ae4cc1a7f
+R=../src/VendingMachine/VendingMachine.vhd|9
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|b5df8f58acea2035eff9983d5f37b9e92a522e3d1f6bfa2041fcad37ae528f867eabdf562f17568a9b1c6a354b739fda
+Version/behaviour=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|687e04e33736ecc2f430230a4d258cac1cf3f6da28b33b2380de57447e82435176062ddb31ce06f4b08f8dc4dbd78456
+
+[vendingmachine_tb]
+A/behaviour=21|../src/VendingMachine/VendingMachine_TB.vhd|13|1*654649
+BinW64/behaviour=3*169691
+I=0*59301
+I/behaviour=0*188683
+M=11|2|vef|1671715297371|../src/VendingMachine/VendingMachine_TB.vhd|0*51238*0x4260661dd23592b82c05c954cdf4b15a946325d0|0*51570*0xd986fd7175c8cf28cd774bcadde79966
+M/behaviour=21|2|vef|1671721300355|../src/VendingMachine/VendingMachine_TB.vhd|0*177731*0xea8ae6e8384892bbcb3777acfaa74d3b02e666fc|0*182859*0xb966535deb9617f745ced53ae4cc1a7f
+R=../src/VendingMachine/VendingMachine_TB.vhd|10
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|b5df8f58acea2035eff9983d5f37b9e978b9587301144990ab0d73a4387a7914ab0de4b99953e44e02bb444f2f5c925a
+Version/behaviour=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|687e04e33736ecc2f430230a4d258cac1cf3f6da28b33b2380de57447e82435168a3bcdc5a878044b5c54fdd27370f43
+
+[vendingmachine_types]
+E=1*142493
+I=0*44044
+M=3|2|vef|1671715283184|../src/VendingMachine/VendingMachine_Types.vhd|0*43195*0x27bf90917797f593524cf438231e523627017294|0*43924*0xd986fd7175c8cf28cd774bcadde79966
+R=../src/VendingMachine/VendingMachine_Types.vhd|6
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b00000090c01c7|b5df8f58acea2035eff9983d5f37b9e99726282bd36a239a1057d3fcbd0a8e562998cc0bed0f6a13680ccd4e513be522
+
+[~U]
+disp4x7seg_types=Disp4x7Seg_Types 3|0*53886|0*54090
+vendingmachine=VendingMachine 11|0*44298|
+vendingmachine_tb=VendingMachine_TB 11|0*51098|
+vendingmachine_types=VendingMachine_Types 3|0*42407|0*42721

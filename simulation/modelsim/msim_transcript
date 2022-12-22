@@ -1,0 +1,330 @@
+# do Sandbox_run_msim_gate_vhdl.do
+# if ![file isdirectory vhdl_libs] {
+# 	file mkdir vhdl_libs
+# }
+# 
+# vlib vhdl_libs/altera
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera".
+# vmap altera ./vhdl_libs/altera
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap altera ./vhdl_libs/altera 
+# Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_syn_attributes
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_standard_functions
+# -- Compiling package body altera_standard_functions
+# -- Loading package altera_standard_functions
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package alt_dspbuilder_package
+# -- Compiling package body alt_dspbuilder_package
+# -- Loading package alt_dspbuilder_package
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package altera_europa_support_lib
+# -- Compiling package body altera_europa_support_lib
+# -- Loading package altera_europa_support_lib
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package dffeas_pack
+# -- Loading package dffeas_pack
+# -- Compiling package altera_primitives_components
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GLOBAL
+# -- Compiling architecture BEHAVIOR of GLOBAL
+# -- Compiling entity CARRY
+# -- Compiling architecture BEHAVIOR of CARRY
+# -- Compiling entity CASCADE
+# -- Compiling architecture BEHAVIOR of CASCADE
+# -- Compiling entity CARRY_SUM
+# -- Compiling architecture BEHAVIOR of CARRY_SUM
+# -- Compiling entity EXP
+# -- Compiling architecture BEHAVIOR of EXP
+# -- Compiling entity SOFT
+# -- Compiling architecture BEHAVIOR of SOFT
+# -- Compiling entity OPNDRN
+# -- Compiling architecture BEHAVIOR of OPNDRN
+# -- Compiling entity ROW_GLOBAL
+# -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+# -- Compiling entity TRI
+# -- Compiling architecture BEHAVIOR of TRI
+# -- Compiling entity LUT_INPUT
+# -- Compiling architecture BEHAVIOR of LUT_INPUT
+# -- Compiling entity LUT_OUTPUT
+# -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+# -- Compiling entity latch
+# -- Compiling architecture BEHAVIOR of latch
+# -- Compiling entity dlatch
+# -- Compiling architecture BEHAVIOR of dlatch
+# -- Compiling entity PRIM_GDFF
+# -- Compiling architecture BEHAVIOR of PRIM_GDFF
+# -- Loading entity PRIM_GDFF
+# -- Compiling entity DFF
+# -- Compiling architecture BEHAVIOR of DFF
+# -- Compiling entity DFFE
+# -- Compiling architecture BEHAVIOR of DFFE
+# -- Compiling entity DFFEA
+# -- Compiling architecture BEHAVIOR of DFFEA
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Compiling entity DFFEAS
+# -- Compiling architecture vital_dffeas of dffeas
+# -- Compiling entity PRIM_GTFF
+# -- Compiling architecture BEHAVIOR of PRIM_GTFF
+# -- Loading entity PRIM_GTFF
+# -- Compiling entity TFF
+# -- Compiling architecture BEHAVIOR of TFF
+# -- Compiling entity TFFE
+# -- Compiling architecture BEHAVIOR of TFFE
+# -- Compiling entity PRIM_GJKFF
+# -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+# -- Loading entity PRIM_GJKFF
+# -- Compiling entity JKFF
+# -- Compiling architecture BEHAVIOR of JKFF
+# -- Compiling entity JKFFE
+# -- Compiling architecture BEHAVIOR of JKFFE
+# -- Compiling entity PRIM_GSRFF
+# -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+# -- Loading entity PRIM_GSRFF
+# -- Compiling entity SRFF
+# -- Compiling architecture BEHAVIOR of SRFF
+# -- Compiling entity SRFFE
+# -- Compiling architecture BEHAVIOR of SRFFE
+# -- Compiling entity clklock
+# -- Compiling architecture behavior of clklock
+# -- Compiling entity alt_inbuf
+# -- Compiling architecture BEHAVIOR of alt_inbuf
+# -- Compiling entity alt_outbuf
+# -- Compiling architecture BEHAVIOR of alt_outbuf
+# -- Compiling entity alt_outbuf_tri
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+# -- Compiling entity alt_iobuf
+# -- Compiling architecture BEHAVIOR of alt_iobuf
+# -- Compiling entity alt_inbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+# -- Compiling entity alt_outbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+# -- Compiling entity alt_outbuf_tri_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+# -- Compiling entity alt_iobuf_diff
+# -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+# -- Compiling entity alt_bidir_diff
+# -- Compiling architecture BEHAVIOR of alt_bidir_diff
+# -- Compiling entity alt_bidir_buf
+# -- Compiling architecture BEHAVIOR of alt_bidir_buf
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/cycloneive
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneive".
+# vmap cycloneive ./vhdl_libs/cycloneive
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap cycloneive ./vhdl_libs/cycloneive 
+# Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+# vcom -93 -work cycloneive {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work cycloneive /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package cycloneive_atom_pack
+# -- Compiling package body cycloneive_atom_pack
+# -- Loading package cycloneive_atom_pack
+# -- Compiling package cycloneive_pllpack
+# -- Compiling package body cycloneive_pllpack
+# -- Loading package cycloneive_pllpack
+# -- Loading package cycloneive_atom_pack
+# -- Compiling entity cycloneive_dffe
+# -- Compiling architecture behave of cycloneive_dffe
+# -- Compiling entity cycloneive_mux21
+# -- Compiling architecture AltVITAL of cycloneive_mux21
+# -- Compiling entity cycloneive_mux41
+# -- Compiling architecture AltVITAL of cycloneive_mux41
+# -- Compiling entity cycloneive_and1
+# -- Compiling architecture AltVITAL of cycloneive_and1
+# -- Compiling entity cycloneive_lcell_comb
+# -- Compiling architecture vital_lcell_comb of cycloneive_lcell_comb
+# -- Compiling entity cycloneive_routing_wire
+# ** Warning: /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd(1667): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# (1076.4 section 4.3.2.1.3)
+# -- Compiling architecture behave of cycloneive_routing_wire
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cycloneive_mn_cntr
+# -- Compiling architecture behave of cycloneive_mn_cntr
+# -- Compiling entity cycloneive_scale_cntr
+# -- Compiling architecture behave of cycloneive_scale_cntr
+# -- Compiling entity cycloneive_pll_reg
+# -- Compiling architecture behave of cycloneive_pll_reg
+# -- Loading package cycloneive_pllpack
+# -- Loading entity cycloneive_mn_cntr
+# -- Loading entity cycloneive_scale_cntr
+# -- Loading entity cycloneive_dffe
+# -- Loading entity cycloneive_pll_reg
+# -- Compiling entity cycloneive_pll
+# -- Compiling architecture vital_pll of cycloneive_pll
+# -- Loading entity cycloneive_and1
+# -- Compiling entity cycloneive_ff
+# -- Compiling architecture vital_lcell_ff of cycloneive_ff
+# -- Compiling entity cycloneive_ram_register
+# -- Compiling architecture reg_arch of cycloneive_ram_register
+# -- Compiling entity cycloneive_ram_pulse_generator
+# -- Compiling architecture pgen_arch of cycloneive_ram_pulse_generator
+# -- Loading entity cycloneive_ram_register
+# -- Loading entity cycloneive_ram_pulse_generator
+# -- Compiling entity cycloneive_ram_block
+# -- Compiling architecture block_arch of cycloneive_ram_block
+# -- Compiling entity cycloneive_mac_data_reg
+# -- Compiling architecture vital_cycloneive_mac_data_reg of cycloneive_mac_data_reg
+# -- Compiling entity cycloneive_mac_sign_reg
+# -- Compiling architecture cycloneive_mac_sign_reg of cycloneive_mac_sign_reg
+# -- Compiling entity cycloneive_mac_mult_internal
+# -- Compiling architecture vital_cycloneive_mac_mult_internal of cycloneive_mac_mult_internal
+# -- Loading entity cycloneive_mac_data_reg
+# -- Loading entity cycloneive_mac_sign_reg
+# -- Loading entity cycloneive_mac_mult_internal
+# -- Compiling entity cycloneive_mac_mult
+# -- Compiling architecture vital_cycloneive_mac_mult of cycloneive_mac_mult
+# -- Compiling entity cycloneive_mac_out
+# -- Compiling architecture vital_cycloneive_mac_out of cycloneive_mac_out
+# -- Compiling entity cycloneive_io_ibuf
+# -- Compiling architecture arch of cycloneive_io_ibuf
+# -- Compiling entity cycloneive_io_obuf
+# -- Compiling architecture arch of cycloneive_io_obuf
+# -- Compiling entity cycloneive_ddio_oe
+# -- Compiling architecture arch of cycloneive_ddio_oe
+# -- Compiling entity cycloneive_latch
+# -- Compiling architecture vital_latch of cycloneive_latch
+# -- Compiling entity cycloneive_ddio_out
+# -- Compiling architecture arch of cycloneive_ddio_out
+# -- Compiling entity cycloneive_pseudo_diff_out
+# -- Compiling architecture arch of cycloneive_pseudo_diff_out
+# -- Compiling entity cycloneive_io_pad
+# -- Compiling architecture arch of cycloneive_io_pad
+# -- Compiling entity cycloneive_asmiblock
+# -- Compiling architecture behavior of cycloneive_asmiblock
+# -- Compiling entity cycloneive_ena_reg
+# -- Compiling architecture behave of cycloneive_ena_reg
+# -- Loading entity cycloneive_ena_reg
+# -- Compiling entity cycloneive_clkctrl
+# -- Compiling architecture vital_clkctrl of cycloneive_clkctrl
+# -- Compiling entity cycloneive_rublock
+# -- Compiling architecture architecture_rublock of cycloneive_rublock
+# -- Compiling entity cycloneive_apfcontroller
+# -- Compiling architecture architecture_apfcontroller of cycloneive_apfcontroller
+# -- Compiling entity cycloneive_termination
+# -- Compiling architecture cycloneive_termination_arch of cycloneive_termination
+# -- Compiling entity cycloneive_jtag
+# -- Compiling architecture architecture_jtag of cycloneive_jtag
+# -- Compiling entity cycloneive_crcblock
+# -- Compiling architecture architecture_crcblock of cycloneive_crcblock
+# -- Compiling entity cycloneive_oscillator
+# -- Compiling architecture architecture_oscillator of cycloneive_oscillator
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work cycloneive {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work cycloneive /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Compiling package cycloneive_components
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vcom -93 -work work {Sandbox.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work work Sandbox.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Sandbox
+# -- Compiling architecture structure of Sandbox
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:56:53 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work work /home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./Sandbox_run_msim_gate_vhdl.do line 28
+# /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd}"

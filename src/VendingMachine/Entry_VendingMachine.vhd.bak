@@ -1,0 +1,26 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Entry_VendingMachine is
+	port (
+		in_clk_50mhz			: in std_logic;
+		
+		in_keys 					: in std_logic_vector(3 downto 0);
+
+		out_buzzer 				: out std_logic							:= '0';		
+		out_leds 				: out std_logic_vector(3 downto 0) 	:= (others => '0');
+		
+		out_7seg 				: out std_logic_vector(7 downto 0) 	:= (others => '0');
+		out_7segDigitSelect 	: out std_logic_vector(3 downto 0) 	:= (others => '0')
+	);
+end Entry_VendingMachine;
+
+architecture behaviour of Entry_VendingMachine is
+
+begin 
+	
+
+end behaviour;
+

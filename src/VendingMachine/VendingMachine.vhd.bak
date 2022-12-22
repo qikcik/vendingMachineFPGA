@@ -1,0 +1,260 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.Disp4x7Seg_Types.all;
+use work.VendingMachine_Types.all;
+
+entity Entry_VendingMachine is
+	port (
+		in_clk_50mhz			: in std_logic;
+		
+		in_keys 					: in std_logic_vector(3 downto 0);
+
+		out_buzzer 				: out std_logic							:= '0';		
+		out_leds 				: out std_logic_vector(3 downto 0) 	:= (others => '0');
+		
+		out_7seg 				: out std_logic_vector(7 downto 0) 	:= (others => '0');
+		out_7segDigitSelect 	: out std_logic_vector(3 downto 0) 	:= (others => '0')
+	);
+end Entry_VendingMachine;
+
+architecture behaviour of Entry_VendingMachine is
+
+	component Disp4x7Seg is
+		port (
+			in_clk					: in std_logic;
+			
+			in_7seg 					: in Array4x7Seg;
+			
+			out_7seg 				: out std_logic_vector(7 downto 0) 	:= (others => '0');
+			out_7segDigitSelect 	: out std_logic_vector(3 downto 0) 	:= (others => '0')
+		);
+	end component;
+	
+	
+	component SingleClkKey is
+	port (
+		in_clk					: in std_logic;
+		
+		in_key 					: in std_logic;
+		out_key 					: out std_logic
+	);
+	end component;
+	
+	signal currentState		: TVendingMachine_State := TVendingMachine_State_Initial;
+	signal nextState			: TVendingMachine_State := TVendingMachine_State_Initial;
+	signal nextState_delay	: std_logic_vector(8 downto 0) := "000000000";
+	
+	signal clk_counter 	: std_logic_vector(25 downto 0) := (others => '0'); -- 50mhz/(2^26) ~= 0.75hz
+	
+	signal display 	 	: Array4x7Seg := (CONST7SEG_EMPTY,CONST7SEG_EMPTY,CONST7SEG_EMPTY,CONST7SEG_EMPTY);
+	
+	signal selectedProduct			: std_logic_vector(1 downto 0) := "00";
+	signal selectedProductPrice	: std_logic_vector(7 downto 0) := "00000000";
+	
+	signal PayByCard					: std_logic := '0';
+	
+	signal paidMoney					: std_logic_vector(7 downto 0) := "00000000";
+	signal rest							: std_logic_vector(7 downto 0) := "00000000";
+	
+	signal keys 						: std_logic_vector(3 downto 0);
+	
+	type TProductPriceArray is array(2 downto 0) of  std_logic_vector(7 downto 0);
+	constant ProductPrices : TProductPriceArray := (X"25",X"09",X"32");
+
+begin 
+
+
+
+	k1: SingleClkKey port map
+	(
+		in_clk					=> clk_counter(16),
+		in_key 					=> in_keys(0),
+		out_key 					=>	keys(0)
+	);
+	k2: SingleClkKey port map
+	(
+		in_clk					=> clk_counter(16),
+		in_key 					=> in_keys(1),
+		out_key 					=>	keys(1)
+	);
+	k3: SingleClkKey port map
+	(
+		in_clk					=> clk_counter(16),
+		in_key 					=> in_keys(2),
+		out_key 					=>	keys(2)
+	);
+	k4: SingleClkKey port map
+	(
+		in_clk					=> clk_counter(16),
+		in_key 					=> in_keys(3),
+		out_key 					=>	keys(3)
+	);
+
+
+	clk_conuter_comp: process(in_clk_50mhz) 
+	begin
+		if rising_edge(in_clk_50mhz) then
+			clk_counter <= std_logic_vector(unsigned(clk_counter) + 1);
+		end if;
+	end process;
+	
+	selectedProductPrice <= ProductPrices(2) when selectedProduct = "11" 
+							 else ProductPrices(1) when selectedProduct = "10"
+							 else ProductPrices(0) when selectedProduct = "01" 
+							 else "00000000";
+							 
+	rest <= std_logic_vector( unsigned(paidMoney) - unsigned(selectedProductPrice) );
+	
+	logic: process(clk_counter(16)) 
+	begin
+		if rising_edge(clk_counter(16)) then
+		if currentState = nextState then
+			case currentState is
+			
+				when TVendingMachine_State_Initial =>
+					display <= (CONST7SEG_1,CONST7SEG_n,CONST7SEG_1,CONST7SEG_t);
+					
+					selectedProduct 	<= "00";
+					PayByCard			<= '0';
+					PaidMoney			<= "00000000";
+					nextState_delay	<= "000000000";
+					
+					nextState <= TVendingMachine_State_SelectProduct;
+					
+				when TVendingMachine_State_SelectProduct =>
+					case keys is
+						when "0001" =>
+							if selectedProduct /= "00" then
+								nextState <= TVendingMachine_State_SelectPaymentMethod;
+							end if;
+						when "0010" => selectedProduct <= "11";
+						when "0100" => selectedProduct <= "10";
+						when "1000" => selectedProduct <= "01";
+						when others => null;
+					end case;
+			
+					if selectedProduct = "00" then
+						display <= (CONST7SEG_S,CONST7SEG_l,CONST7SEG_c,CONST7SEG_t);
+					else
+						display(3) <= BinTo7SegHex( B"00"&selectedProduct(1 downto 0) ) xor CONST7SEG_DOT;
+						display(2) <= CONST7SEG_EMPTY;
+						display(1) <= BinTo7SegHex( selectedProductPrice(7 downto 4) ) xor CONST7SEG_DOT;
+						display(0) <= BinTo7SegHex( selectedProductPrice(3 downto 0) );
+					end if;
+					
+				when TVendingMachine_State_SelectPaymentMethod =>
+					case keys is
+						when "0001" => 
+							if PayByCard then
+								nextState <= TVendingMachine_State_PayByCard;
+							else
+								nextState <= TVendingMachine_State_PayByCash;
+							end if;
+						when "0010" => nextState <= TVendingMachine_State_Cancel;
+						when "0100" => PayByCard <= '1';
+						when "1000" => PayByCard <= '0';
+						when others => null;
+					end case;
+			
+					if PayByCard  then
+						display <= (CONST7SEG_C,CONST7SEG_A,CONST7SEG_r,CONST7SEG_d);
+					else
+						display <= (CONST7SEG_C,CONST7SEG_A,CONST7SEG_S,CONST7SEG_H);
+					end if;
+					
+					
+				when TVendingMachine_State_PayByCard =>
+					case keys is
+						when "0001" => nextState <= TVendingMachine_State_ReleaseProduct;
+						when "0000" => null;
+						when others => nextState <= TVendingMachine_State_Cancel;
+					end case;
+			
+					display <= (CONST7SEG_R,CONST7SEG_E,CONST7SEG_D,CONST7SEG_Y);
+
+					
+				when TVendingMachine_State_PayByCash =>
+					case keys is
+						when "0001" => nextState <= TVendingMachine_State_PayByCash_Cancel;
+						when "1000" => paidMoney <= std_logic_vector(unsigned(paidMoney) + X"10");
+						when "0100" => paidMoney <= std_logic_vector(unsigned(paidMoney) + X"08");
+						when "0010" => paidMoney <= std_logic_vector(unsigned(paidMoney) + X"01");
+						when others => null;
+					end case;
+					
+					if unsigned(paidMoney) >= unsigned(selectedProductPrice) then
+						nextState <= VendingMachine_State_PayByCash_Success;
+					end if;
+					
+					display(3) <= CONST7SEG_P xor CONST7SEG_DOT;
+					display(2) <= CONST7SEG_EMPTY;
+					display(1) <= BinTo7SegHex( paidMoney(7 downto 4) ) xor CONST7SEG_DOT;
+					display(0) <= BinTo7SegHex( paidMoney(3 downto 0) );
+					
+					
+				when VendingMachine_State_PayByCash_Success =>
+				
+					display(3) <= CONST7SEG_r xor CONST7SEG_DOT;
+					display(2) <= CONST7SEG_EMPTY;
+					display(1) <= BinTo7SegHex( rest(7 downto 4) ) xor CONST7SEG_DOT;
+					display(0) <= BinTo7SegHex( rest(3 downto 0) );
+					
+					nextState <= TVendingMachine_State_ReleaseProduct;
+					
+					
+				when TVendingMachine_State_PayByCash_Cancel =>
+				
+					display(3) <= CONST7SEG_r xor CONST7SEG_DOT;
+					display(2) <= CONST7SEG_EMPTY;
+					display(1) <= BinTo7SegHex( paidMoney(7 downto 4) ) xor CONST7SEG_DOT;
+					display(0) <= BinTo7SegHex( paidMoney(3 downto 0) );
+					
+					nextState <= TVendingMachine_State_Cancel;
+				
+				when TVendingMachine_State_ReleaseProduct =>
+					display <= (CONST7SEG_d,CONST7SEG_r,CONST7SEG_0,CONST7SEG_P);
+					nextState <= TVendingMachine_State_Initial;
+				
+				when TVendingMachine_State_Cancel =>
+					display <= (CONST7SEG_C,CONST7SEG_n,CONST7SEG_c,CONST7SEG_l);
+					nextState <= TVendingMachine_State_Initial;
+				
+				when TVendingMachine_State_Error =>
+					display <= (CONST7SEG_E,CONST7SEG_r,CONST7SEG_o,CONST7SEG_r);
+					nextState <= TVendingMachine_State_Initial;
+				
+				when others => 
+					nextState <= TVendingMachine_State_Error;
+					
+			end case;
+		else
+			nextState_delay <= std_logic_vector(unsigned(nextState_delay)+1);
+			if nextState_delay = "111111111" then
+				nextState_delay <= "000000000";
+				currentState <= nextState;
+			end if;
+		end if;
+			
+		end if;
+	end process;
+
+	mainEntity: Disp4x7Seg port map
+	(
+		in_clk					=> clk_counter(15),
+		
+		in_7seg					=> display,
+		
+		out_7seg 				=> out_7seg,
+		out_7segDigitSelect 	=> out_7segDigitSelect
+	);
+
+	--out_leds(3) <= '1';
+	--out_leds(2 downto 0) <= in_keys(2 downto 0);
+	--out_7segDigitSelect <= "1100";
+	--out_7seg <= "10000000";
+	
+end behaviour;
+

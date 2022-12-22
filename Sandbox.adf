@@ -1,0 +1,55 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=Sandbox
+[Library]
+Sandbox=.\Sandbox\Sandbox.lib
+[$LibMap$]
+Sandbox=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\My_Designs\Sandbox\src\VendingMachine
+[Files.Data]
+.\src\VendingMachine\VendingMachine_Types.vhd=VHDL Source Code
+.\src\VendingMachine\VendingMachine.vhd=VHDL Source Code
+.\src\VendingMachine\VendingMachine_TB.vhd=VHDL Source Code
+.\src\VendingMachine\waveform.asdb=Accelerated Waveform File
+.\src\VendingMachine\waveform.awc=Accelerated Waveform Configuration
+.\src\Disp7Seg\Disp4x7Seg_Types.vhd=VHDL Source Code
+[Groups]
+VendingMachine=1
+Disp7Seg=1
+[Files]
+VendingMachine/VendingMachine_Types.vhd=-1
+VendingMachine/VendingMachine.vhd=-1
+VendingMachine/VendingMachine_TB.vhd=-1
+VendingMachine/waveform.asdb=-1
+VendingMachine/waveform.awc=-1
+Disp7Seg/Disp4x7Seg_Types.vhd=-1
+[LocalVhdlSets]
+NetlistCompilation=1
+EnableVHDL93Key=0
+EnableVHDL2002Key=0
+EnableVHDL2008Key=1
+EnableVHDL2019Key=0
+DisableVHDL87Key=0
+Syntax RelaxLRM=0
+MaxErrorsKey=100
+CompileWithDebug=0
+OptimizationLevel=3
+DisableRangeChecks=0
+ProtectLevel=0
+IncrementalCompilation=0
+AdditionalOptions=
+[HierarchyViewer]
+HierarchyInformation=vendingmachine|behaviour|0 vendingmachine_tb|behaviour|0
+ShowHide=ShowTopLevel
+Selected=

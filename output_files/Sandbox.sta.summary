@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -4.402
+TNS   : -243.388
+
+Type  : Slow 1200mV 85C Model Setup 'in_clk_50mhz'
+Slack : -2.201
+TNS   : -25.176
+
+Type  : Slow 1200mV 85C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -1.348
+TNS   : -10.239
+
+Type  : Slow 1200mV 85C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'in_clk_50mhz'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'in_clk_50mhz'
+Slack : -3.000
+TNS   : -28.279
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -1.487
+TNS   : -110.038
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 0C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -3.961
+TNS   : -223.571
+
+Type  : Slow 1200mV 0C Model Setup 'in_clk_50mhz'
+Slack : -1.897
+TNS   : -21.534
+
+Type  : Slow 1200mV 0C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -1.243
+TNS   : -8.467
+
+Type  : Slow 1200mV 0C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'in_clk_50mhz'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'in_clk_50mhz'
+Slack : -3.000
+TNS   : -28.279
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -1.487
+TNS   : -110.038
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Fast 1200mV 0C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -1.301
+TNS   : -65.264
+
+Type  : Fast 1200mV 0C Model Setup 'in_clk_50mhz'
+Slack : -0.654
+TNS   : -2.556
+
+Type  : Fast 1200mV 0C Model Setup 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -0.032
+TNS   : -0.032
+
+Type  : Fast 1200mV 0C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'in_clk_50mhz'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'in_clk_50mhz'
+Slack : -3.000
+TNS   : -21.088
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[16]'
+Slack : -1.000
+TNS   : -74.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Entry_VendingMachine:mainEntity|clk_divider[15]'
+Slack : -1.000
+TNS   : -14.000
+
+------------------------------------------------------------

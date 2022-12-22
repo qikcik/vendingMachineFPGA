@@ -1,0 +1,26 @@
+
+State Machine - |Entry|Entry_VendingMachine:mainEntity|VendingMachine:c_vendingMachine|currentState
+Name currentState.TVendingMachine_State_Error currentState.TVendingMachine_State_Cancel currentState.TVendingMachine_State_ReleaseProduct currentState.TVendingMachine_State_PayByCash_Cancel currentState.VendingMachine_State_PayByCash_Success currentState.TVendingMachine_State_PayByCash currentState.TVendingMachine_State_PayByCard currentState.TVendingMachine_State_SelectPaymentMethod currentState.TVendingMachine_State_SelectProduct currentState.TVendingMachine_State_Initial 
+currentState.TVendingMachine_State_Initial 0 0 0 0 0 0 0 0 0 0 
+currentState.TVendingMachine_State_SelectProduct 0 0 0 0 0 0 0 0 1 1 
+currentState.TVendingMachine_State_SelectPaymentMethod 0 0 0 0 0 0 0 1 0 1 
+currentState.TVendingMachine_State_PayByCard 0 0 0 0 0 0 1 0 0 1 
+currentState.TVendingMachine_State_PayByCash 0 0 0 0 0 1 0 0 0 1 
+currentState.VendingMachine_State_PayByCash_Success 0 0 0 0 1 0 0 0 0 1 
+currentState.TVendingMachine_State_PayByCash_Cancel 0 0 0 1 0 0 0 0 0 1 
+currentState.TVendingMachine_State_ReleaseProduct 0 0 1 0 0 0 0 0 0 1 
+currentState.TVendingMachine_State_Cancel 0 1 0 0 0 0 0 0 0 1 
+currentState.TVendingMachine_State_Error 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Entry|Entry_VendingMachine:mainEntity|VendingMachine:c_vendingMachine|nextState
+Name nextState.TVendingMachine_State_Error nextState.TVendingMachine_State_Cancel nextState.TVendingMachine_State_ReleaseProduct nextState.TVendingMachine_State_PayByCash_Cancel nextState.VendingMachine_State_PayByCash_Success nextState.TVendingMachine_State_PayByCash nextState.TVendingMachine_State_PayByCard nextState.TVendingMachine_State_SelectPaymentMethod nextState.TVendingMachine_State_SelectProduct nextState.TVendingMachine_State_Initial 
+nextState.TVendingMachine_State_Initial 0 0 0 0 0 0 0 0 0 0 
+nextState.TVendingMachine_State_SelectProduct 0 0 0 0 0 0 0 0 1 1 
+nextState.TVendingMachine_State_SelectPaymentMethod 0 0 0 0 0 0 0 1 0 1 
+nextState.TVendingMachine_State_PayByCard 0 0 0 0 0 0 1 0 0 1 
+nextState.TVendingMachine_State_PayByCash 0 0 0 0 0 1 0 0 0 1 
+nextState.VendingMachine_State_PayByCash_Success 0 0 0 0 1 0 0 0 0 1 
+nextState.TVendingMachine_State_PayByCash_Cancel 0 0 0 1 0 0 0 0 0 1 
+nextState.TVendingMachine_State_ReleaseProduct 0 0 1 0 0 0 0 0 0 1 
+nextState.TVendingMachine_State_Cancel 0 1 0 0 0 0 0 0 0 1 
+nextState.TVendingMachine_State_Error 1 0 0 0 0 0 0 0 0 1 

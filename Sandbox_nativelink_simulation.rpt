@@ -1,0 +1,387 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  /home/qik/intelFPGA_lite/22.1std/quartus/linux64/
+Quartus sim root      :  /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  Sandbox.vho
+Sim SDF file          :  Sandbox__vhdl.sdo
+Sim dir               :  simulation/modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script /home/qik/intelFPGA_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File Sandbox_run_msim_gate_vhdl.do already exists - backing up current file as Sandbox_run_msim_gate_vhdl.do.bak11
+Probing transcript
+ModelSim Info: # do Sandbox_run_msim_gate_vhdl.do
+ModelSim Info: # if ![file isdirectory vhdl_libs] {
+ModelSim Info: # 	file mkdir vhdl_libs
+ModelSim Info: # }
+ModelSim Info: # 
+ModelSim Info: # vlib vhdl_libs/altera
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera".
+ModelSim Info: # vmap altera ./vhdl_libs/altera
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap altera ./vhdl_libs/altera 
+ModelSim Info: # Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Compiling package altera_syn_attributes
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Compiling package altera_standard_functions
+ModelSim Info: # -- Compiling package body altera_standard_functions
+ModelSim Info: # -- Loading package altera_standard_functions
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package std_logic_arith
+ModelSim Info: # -- Compiling package alt_dspbuilder_package
+ModelSim Info: # -- Compiling package body alt_dspbuilder_package
+ModelSim Info: # -- Loading package alt_dspbuilder_package
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package NUMERIC_STD
+ModelSim Info: # -- Loading package std_logic_arith
+ModelSim Info: # -- Loading package STD_LOGIC_UNSIGNED
+ModelSim Info: # -- Compiling package altera_europa_support_lib
+ModelSim Info: # -- Compiling package body altera_europa_support_lib
+ModelSim Info: # -- Loading package altera_europa_support_lib
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package VITAL_Timing
+ModelSim Info: # -- Loading package VITAL_Primitives
+ModelSim Info: # -- Compiling package dffeas_pack
+ModelSim Info: # -- Loading package dffeas_pack
+ModelSim Info: # -- Compiling package altera_primitives_components
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vcom -93 -work altera {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work altera /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Compiling entity GLOBAL
+ModelSim Info: # -- Compiling architecture BEHAVIOR of GLOBAL
+ModelSim Info: # -- Compiling entity CARRY
+ModelSim Info: # -- Compiling architecture BEHAVIOR of CARRY
+ModelSim Info: # -- Compiling entity CASCADE
+ModelSim Info: # -- Compiling architecture BEHAVIOR of CASCADE
+ModelSim Info: # -- Compiling entity CARRY_SUM
+ModelSim Info: # -- Compiling architecture BEHAVIOR of CARRY_SUM
+ModelSim Info: # -- Compiling entity EXP
+ModelSim Info: # -- Compiling architecture BEHAVIOR of EXP
+ModelSim Info: # -- Compiling entity SOFT
+ModelSim Info: # -- Compiling architecture BEHAVIOR of SOFT
+ModelSim Info: # -- Compiling entity OPNDRN
+ModelSim Info: # -- Compiling architecture BEHAVIOR of OPNDRN
+ModelSim Info: # -- Compiling entity ROW_GLOBAL
+ModelSim Info: # -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+ModelSim Info: # -- Compiling entity TRI
+ModelSim Info: # -- Compiling architecture BEHAVIOR of TRI
+ModelSim Info: # -- Compiling entity LUT_INPUT
+ModelSim Info: # -- Compiling architecture BEHAVIOR of LUT_INPUT
+ModelSim Info: # -- Compiling entity LUT_OUTPUT
+ModelSim Info: # -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+ModelSim Info: # -- Compiling entity latch
+ModelSim Info: # -- Compiling architecture BEHAVIOR of latch
+ModelSim Info: # -- Compiling entity dlatch
+ModelSim Info: # -- Compiling architecture BEHAVIOR of dlatch
+ModelSim Info: # -- Compiling entity PRIM_GDFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of PRIM_GDFF
+ModelSim Info: # -- Loading entity PRIM_GDFF
+ModelSim Info: # -- Compiling entity DFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of DFF
+ModelSim Info: # -- Compiling entity DFFE
+ModelSim Info: # -- Compiling architecture BEHAVIOR of DFFE
+ModelSim Info: # -- Compiling entity DFFEA
+ModelSim Info: # -- Compiling architecture BEHAVIOR of DFFEA
+ModelSim Info: # -- Loading package VITAL_Timing
+ModelSim Info: # -- Loading package VITAL_Primitives
+ModelSim Info: # -- Loading package dffeas_pack
+ModelSim Info: # -- Compiling entity DFFEAS
+ModelSim Info: # -- Compiling architecture vital_dffeas of dffeas
+ModelSim Info: # -- Compiling entity PRIM_GTFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of PRIM_GTFF
+ModelSim Info: # -- Loading entity PRIM_GTFF
+ModelSim Info: # -- Compiling entity TFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of TFF
+ModelSim Info: # -- Compiling entity TFFE
+ModelSim Info: # -- Compiling architecture BEHAVIOR of TFFE
+ModelSim Info: # -- Compiling entity PRIM_GJKFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+ModelSim Info: # -- Loading entity PRIM_GJKFF
+ModelSim Info: # -- Compiling entity JKFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of JKFF
+ModelSim Info: # -- Compiling entity JKFFE
+ModelSim Info: # -- Compiling architecture BEHAVIOR of JKFFE
+ModelSim Info: # -- Compiling entity PRIM_GSRFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+ModelSim Info: # -- Loading entity PRIM_GSRFF
+ModelSim Info: # -- Compiling entity SRFF
+ModelSim Info: # -- Compiling architecture BEHAVIOR of SRFF
+ModelSim Info: # -- Compiling entity SRFFE
+ModelSim Info: # -- Compiling architecture BEHAVIOR of SRFFE
+ModelSim Info: # -- Compiling entity clklock
+ModelSim Info: # -- Compiling architecture behavior of clklock
+ModelSim Info: # -- Compiling entity alt_inbuf
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_inbuf
+ModelSim Info: # -- Compiling entity alt_outbuf
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_outbuf
+ModelSim Info: # -- Compiling entity alt_outbuf_tri
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+ModelSim Info: # -- Compiling entity alt_iobuf
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_iobuf
+ModelSim Info: # -- Compiling entity alt_inbuf_diff
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+ModelSim Info: # -- Compiling entity alt_outbuf_diff
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+ModelSim Info: # -- Compiling entity alt_outbuf_tri_diff
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+ModelSim Info: # -- Compiling entity alt_iobuf_diff
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+ModelSim Info: # -- Compiling entity alt_bidir_diff
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_bidir_diff
+ModelSim Info: # -- Compiling entity alt_bidir_buf
+ModelSim Info: # -- Compiling architecture BEHAVIOR of alt_bidir_buf
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib vhdl_libs/cycloneive
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneive".
+ModelSim Info: # vmap cycloneive ./vhdl_libs/cycloneive
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap cycloneive ./vhdl_libs/cycloneive 
+ModelSim Info: # Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+ModelSim Info: # vcom -93 -work cycloneive {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work cycloneive /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package VITAL_Timing
+ModelSim Info: # -- Loading package VITAL_Primitives
+ModelSim Info: # -- Compiling package cycloneive_atom_pack
+ModelSim Info: # -- Compiling package body cycloneive_atom_pack
+ModelSim Info: # -- Loading package cycloneive_atom_pack
+ModelSim Info: # -- Compiling package cycloneive_pllpack
+ModelSim Info: # -- Compiling package body cycloneive_pllpack
+ModelSim Info: # -- Loading package cycloneive_pllpack
+ModelSim Info: # -- Loading package cycloneive_atom_pack
+ModelSim Info: # -- Compiling entity cycloneive_dffe
+ModelSim Info: # -- Compiling architecture behave of cycloneive_dffe
+ModelSim Info: # -- Compiling entity cycloneive_mux21
+ModelSim Info: # -- Compiling architecture AltVITAL of cycloneive_mux21
+ModelSim Info: # -- Compiling entity cycloneive_mux41
+ModelSim Info: # -- Compiling architecture AltVITAL of cycloneive_mux41
+ModelSim Info: # -- Compiling entity cycloneive_and1
+ModelSim Info: # -- Compiling architecture AltVITAL of cycloneive_and1
+ModelSim Info: # -- Compiling entity cycloneive_lcell_comb
+ModelSim Info: # -- Compiling architecture vital_lcell_comb of cycloneive_lcell_comb
+ModelSim Info: # -- Compiling entity cycloneive_routing_wire
+ModelSim Warning: # ** Warning: /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.vhd(1667): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+ModelSim Info: # (1076.4 section 4.3.2.1.3)
+ModelSim Info: # -- Compiling architecture behave of cycloneive_routing_wire
+ModelSim Info: # -- Loading package std_logic_arith
+ModelSim Info: # -- Loading package STD_LOGIC_UNSIGNED
+ModelSim Info: # -- Compiling entity cycloneive_mn_cntr
+ModelSim Info: # -- Compiling architecture behave of cycloneive_mn_cntr
+ModelSim Info: # -- Compiling entity cycloneive_scale_cntr
+ModelSim Info: # -- Compiling architecture behave of cycloneive_scale_cntr
+ModelSim Info: # -- Compiling entity cycloneive_pll_reg
+ModelSim Info: # -- Compiling architecture behave of cycloneive_pll_reg
+ModelSim Info: # -- Loading package cycloneive_pllpack
+ModelSim Info: # -- Loading entity cycloneive_mn_cntr
+ModelSim Info: # -- Loading entity cycloneive_scale_cntr
+ModelSim Info: # -- Loading entity cycloneive_dffe
+ModelSim Info: # -- Loading entity cycloneive_pll_reg
+ModelSim Info: # -- Compiling entity cycloneive_pll
+ModelSim Info: # -- Compiling architecture vital_pll of cycloneive_pll
+ModelSim Info: # -- Loading entity cycloneive_and1
+ModelSim Info: # -- Compiling entity cycloneive_ff
+ModelSim Info: # -- Compiling architecture vital_lcell_ff of cycloneive_ff
+ModelSim Info: # -- Compiling entity cycloneive_ram_register
+ModelSim Info: # -- Compiling architecture reg_arch of cycloneive_ram_register
+ModelSim Info: # -- Compiling entity cycloneive_ram_pulse_generator
+ModelSim Info: # -- Compiling architecture pgen_arch of cycloneive_ram_pulse_generator
+ModelSim Info: # -- Loading entity cycloneive_ram_register
+ModelSim Info: # -- Loading entity cycloneive_ram_pulse_generator
+ModelSim Info: # -- Compiling entity cycloneive_ram_block
+ModelSim Info: # -- Compiling architecture block_arch of cycloneive_ram_block
+ModelSim Info: # -- Compiling entity cycloneive_mac_data_reg
+ModelSim Info: # -- Compiling architecture vital_cycloneive_mac_data_reg of cycloneive_mac_data_reg
+ModelSim Info: # -- Compiling entity cycloneive_mac_sign_reg
+ModelSim Info: # -- Compiling architecture cycloneive_mac_sign_reg of cycloneive_mac_sign_reg
+ModelSim Info: # -- Compiling entity cycloneive_mac_mult_internal
+ModelSim Info: # -- Compiling architecture vital_cycloneive_mac_mult_internal of cycloneive_mac_mult_internal
+ModelSim Info: # -- Loading entity cycloneive_mac_data_reg
+ModelSim Info: # -- Loading entity cycloneive_mac_sign_reg
+ModelSim Info: # -- Loading entity cycloneive_mac_mult_internal
+ModelSim Info: # -- Compiling entity cycloneive_mac_mult
+ModelSim Info: # -- Compiling architecture vital_cycloneive_mac_mult of cycloneive_mac_mult
+ModelSim Info: # -- Compiling entity cycloneive_mac_out
+ModelSim Info: # -- Compiling architecture vital_cycloneive_mac_out of cycloneive_mac_out
+ModelSim Info: # -- Compiling entity cycloneive_io_ibuf
+ModelSim Info: # -- Compiling architecture arch of cycloneive_io_ibuf
+ModelSim Info: # -- Compiling entity cycloneive_io_obuf
+ModelSim Info: # -- Compiling architecture arch of cycloneive_io_obuf
+ModelSim Info: # -- Compiling entity cycloneive_ddio_oe
+ModelSim Info: # -- Compiling architecture arch of cycloneive_ddio_oe
+ModelSim Info: # -- Compiling entity cycloneive_latch
+ModelSim Info: # -- Compiling architecture vital_latch of cycloneive_latch
+ModelSim Info: # -- Compiling entity cycloneive_ddio_out
+ModelSim Info: # -- Compiling architecture arch of cycloneive_ddio_out
+ModelSim Info: # -- Compiling entity cycloneive_pseudo_diff_out
+ModelSim Info: # -- Compiling architecture arch of cycloneive_pseudo_diff_out
+ModelSim Info: # -- Compiling entity cycloneive_io_pad
+ModelSim Info: # -- Compiling architecture arch of cycloneive_io_pad
+ModelSim Info: # -- Compiling entity cycloneive_asmiblock
+ModelSim Info: # -- Compiling architecture behavior of cycloneive_asmiblock
+ModelSim Info: # -- Compiling entity cycloneive_ena_reg
+ModelSim Info: # -- Compiling architecture behave of cycloneive_ena_reg
+ModelSim Info: # -- Loading entity cycloneive_ena_reg
+ModelSim Info: # -- Compiling entity cycloneive_clkctrl
+ModelSim Info: # -- Compiling architecture vital_clkctrl of cycloneive_clkctrl
+ModelSim Info: # -- Compiling entity cycloneive_rublock
+ModelSim Info: # -- Compiling architecture architecture_rublock of cycloneive_rublock
+ModelSim Info: # -- Compiling entity cycloneive_apfcontroller
+ModelSim Info: # -- Compiling architecture architecture_apfcontroller of cycloneive_apfcontroller
+ModelSim Info: # -- Compiling entity cycloneive_termination
+ModelSim Info: # -- Compiling architecture cycloneive_termination_arch of cycloneive_termination
+ModelSim Info: # -- Compiling entity cycloneive_jtag
+ModelSim Info: # -- Compiling architecture architecture_jtag of cycloneive_jtag
+ModelSim Info: # -- Compiling entity cycloneive_crcblock
+ModelSim Info: # -- Compiling architecture architecture_crcblock of cycloneive_crcblock
+ModelSim Info: # -- Compiling entity cycloneive_oscillator
+ModelSim Info: # -- Compiling architecture architecture_oscillator of cycloneive_oscillator
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 1
+ModelSim Info: # vcom -93 -work cycloneive {/home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_components.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work cycloneive /home/qik/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cycloneive_components.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package VITAL_Timing
+ModelSim Info: # -- Loading package VITAL_Primitives
+ModelSim Info: # -- Loading package cycloneive_atom_pack
+ModelSim Info: # -- Compiling package cycloneive_components
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # if {[file exists gate_work]} {
+ModelSim Info: # 	vdel -lib gate_work -all
+ModelSim Info: # }
+ModelSim Info: # vlib gate_work
+ModelSim Info: # vmap work gate_work
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap work gate_work 
+ModelSim Info: # Modifying /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/../modelsim.ini
+ModelSim Info: # 
+ModelSim Info: # vcom -93 -work work {Sandbox.vho}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work work Sandbox.vho 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Loading package VITAL_Timing
+ModelSim Info: # -- Loading package VITAL_Primitives
+ModelSim Info: # -- Loading package cycloneive_atom_pack
+ModelSim Info: # -- Loading package cycloneive_components
+ModelSim Info: # -- Compiling entity hard_block
+ModelSim Info: # -- Compiling architecture structure of hard_block
+ModelSim Info: # -- Loading package dffeas_pack
+ModelSim Info: # -- Loading package altera_primitives_components
+ModelSim Info: # -- Compiling entity Sandbox
+ModelSim Info: # -- Compiling architecture structure of Sandbox
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vcom -93 -work work {/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 15:56:53 on Dec 18,2022
+ModelSim Info: # vcom -reportprogress 300 -93 -work work /home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd 
+ModelSim Error: # ** Error: (vcom-7) Failed to open design unit file "/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd" in read mode.
+ModelSim Info: # No such file or directory. (errno = ENOENT)
+ModelSim Info: # End time: 15:56:53 on Dec 18,2022, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 1, Warnings: 0
+ModelSim Error: # ** Error: /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/vcom failed.
+ModelSim Info: # Error in macro ./Sandbox_run_msim_gate_vhdl.do line 28
+ModelSim Info: # /home/qik/intelFPGA_lite/modelsim_ase/linuxaloem/vcom failed.
+ModelSim Info: #     while executing
+ModelSim Info: # "vcom -93 -work work {/home/qik/vhdl/Sandbox/kolokwium/ParityChecker_tb.vhd}"
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+                set savedCode $::errorCode
+                set savedInfo $::errorInfo
+                error $result $..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+            set status 1
+            if [ info exists ::errorCode ] {
+                set save..."
+    (procedure "run_sim" line 74)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+            set savedCode $::errorCode
+            set savedInfo $::errorInfo
+            error "$result" $savedInfo ..."
+    (procedure "run_eda_simulation_tool" line 334)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

@@ -1,0 +1,5 @@
+57
+~E 1 "../src/VendingMachine/VendingMachine.vhd" 9 VendingMachine
+~A 1 "../src/VendingMachine/VendingMachine.vhd" 24 behaviour
+~E 1 "../src/VendingMachine/VendingMachine_TB.vhd" 10 VendingMachine_TB
+~A 1 "../src/VendingMachine/VendingMachine_TB.vhd" 13 behaviour
