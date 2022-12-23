@@ -1,0 +1,36 @@
+@startuml
+!theme toy
+
+[*] --> TVendingMachine_State_Initial
+
+TVendingMachine_State_Initial --right-> TVendingMachine_State_SelectProduct 
+TVendingMachine_State_SelectProduct --right-> TVendingMachine_State_SelectPaymentMethod
+
+TVendingMachine_State_SelectPaymentMethod ---> TVendingMachine_State_PayByCash 
+TVendingMachine_State_SelectPaymentMethod ---> TVendingMachine_State_PayByCard 
+
+
+TVendingMachine_State_PayByCard --[#LimeGreen]-> TVendingMachine_State_ReleaseProduct
+TVendingMachine_State_PayByCash --right[#LimeGreen]-> VendingMachine_State_PayByCash_Success
+
+
+VendingMachine_State_PayByCash_Success -[#LimeGreen]-> TVendingMachine_State_ReleaseProduct
+
+
+
+TVendingMachine_State_PayByCash --[#IndianRed]-> TVendingMachine_State_PayByCash_Cancel
+TVendingMachine_State_SelectPaymentMethod --[#IndianRed]> TVendingMachine_State_Cancel
+TVendingMachine_State_PayByCard --[#IndianRed]-> TVendingMachine_State_Cancel
+TVendingMachine_State_PayByCash_Cancel --[#IndianRed]-> TVendingMachine_State_Cancel
+
+
+TVendingMachine_State_Cancel --[#IndianRed]-> TVendingMachine_State_Initial
+
+TVendingMachine_State_ReleaseProduct --[#LimeGreen]-> TVendingMachine_State_Initial
+
+
+state TVendingMachine_State_Initial #gray
+state TVendingMachine_State_ReleaseProduct #LimeGreen
+state TVendingMachine_State_Cancel #IndianRed
+
+@enduml
